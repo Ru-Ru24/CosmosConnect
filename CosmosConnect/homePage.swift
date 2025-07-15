@@ -41,8 +41,8 @@ struct homePage: View {
                         .multilineTextAlignment(.leading)
                         .padding(.vertical)
                     
-                    sectionView(title: "Favorites")
-                    sectionView(title: "Pic of the Day")
+                    sectionView(title: "Section 1")
+                    sectionView(title: "Section 2")
                     sectionView(title: "Section 3")
 
                     Image("stars")
