@@ -9,87 +9,78 @@ import SwiftUI
 
 struct homePage: View {
     var body: some View {
-        ScrollView {
-            VStack {
-                ScrollView {
+        ZStack {
+            Image("back")
+                .resizable()
+                .scaledToFill()
+                .ignoresSafeArea()
+            
+            ScrollView {
+                VStack(spacing: 10) {
+                    Spacer()
+                        .padding(.top)
                     HStack {
                         Image("galaxy-star")
-                            .resizable(resizingMode: .stretch)
+                            .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .padding(.all)
-                            
-                        Text("Home")
+                            .frame(height: 35)
                             .padding([.top, .leading, .trailing])
-                        Text("Daily Pic")
-                            .padding([.top, .leading, .trailing])
-                        Text("Light Pollution")
-                            .padding([.top, .leading])
-                        
+
+                        Text("Cosmo Connect")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                            .padding(.top)
+                        Spacer()
                     }
+                    .padding(.top)
+                    Text("Welcome to Cosmo Connect (insert little desc)")
+                        .font(.caption)
                     
-                VStack(alignment: .leading, spacing: 8) {
-                        Text("")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                        Rectangle()
-                            .fill(Color.gray.opacity(0.2))
-                            .frame(height: 150)
-                            .overlay(
-                                Text("Content Placeholder")
-                                    .foregroundColor(.gray)
-                            )
-                            .cornerRadius(10)
-                }
-                .padding(.horizontal)
-
-                    // Section 2
-                VStack(alignment: .leading, spacing: 8) {
-                        Text("Section 2")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                        Rectangle()
-                            .fill(Color.gray.opacity(0.2))
-                            .frame(height: 150)
-                            .overlay(
-                                Text("Content Placeholder")
-                                    .foregroundColor(.gray)
-                            )
-                            .cornerRadius(10)
-                }
-                .padding(.horizontal)
-
-                   
-                VStack(alignment: .leading, spacing: 8) {
-                        Text("Section 3")
-                            .font(.title2)
-                            .fontWeight(.semibold)
-                        Rectangle()
-                            .fill(Color.gray.opacity(0.2))
-                            .frame(height: 150)
-                            .overlay(
-                                Text("Content Placeholder")
-                                    .foregroundColor(.gray)
-                            )
-                            .cornerRadius(10)
-                }
-                .padding(.horizontal)
-
-
-                }
-                Image("stars")
-                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 0.0), resizingMode: .stretch)
-                    .aspectRatio(contentMode: .fill)
-                    .padding(.all)
-                Text("This is a placeholder")
-                    .font(.caption)
-                Spacer()
-                
-                ZStack {
+                        .foregroundColor(Color.white)
+                        .multilineTextAlignment(.leading)
+                        .padding(.vertical)
                     
-                    
+                    sectionView(title: "Favorites")
+                    sectionView(title: "Pic of the Day")
+                    sectionView(title: "Section 3")
+
+                    Image("stars")
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(height: 150)
+                        .clipped()
+                        .padding()
+
+                    Text("This is a placeholder")
+                        .font(.caption)
+                        .foregroundColor(.white)
+
+                    Spacer()
                 }
+                .padding()
             }
+            .ignoresSafeArea() // Ensures scroll content fills screen, including top
         }
+    }
+
+    func sectionView(title: String) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.title2)
+                .fontWeight(.semibold)
+                .foregroundColor(.white)
+
+            Rectangle()
+                .fill(Color.gray.opacity(0.2))
+                .frame(height: 150)
+                .cornerRadius(10)
+                .overlay(
+                    Text("Content Placeholder")
+                        .foregroundColor(.white)
+                )
+        }
+        .padding(.horizontal)
     }
 }
 
