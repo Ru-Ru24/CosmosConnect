@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ApodImage: Decodable {
+struct ApodImage: Decodable, Identifiable, Equatable{
+    var id:String {url}
+    
     let title: String
     let url: String
     let explanation: String
     let media_type: String // Sometimes APOD returns a video
-    
-    
     
 }
