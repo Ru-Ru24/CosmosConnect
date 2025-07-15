@@ -19,6 +19,7 @@ struct NasaImageView: View {
                     Text("NASA Astronomy Picture Of The Day")
                         .font(.title2)
                         .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
                     
                     Text(apod.title)
                         .font(.title2)
@@ -35,12 +36,15 @@ struct NasaImageView: View {
                     } placeholder: {
                         ProgressView()
                     }
+                    //Spacer()
 
+                    /*
                     ScrollView {
                         //click here to view more
                         Text(apod.explanation)
                             .padding()
                     }
+                     */
                 } else {
                     ProgressView("Fetching NASA Image...")
                         .onAppear {
