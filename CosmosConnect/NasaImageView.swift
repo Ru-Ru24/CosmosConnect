@@ -36,7 +36,6 @@ struct NasaImageView: View {
                     } placeholder: {
                         ProgressView()
                     }
-                    //Spacer()
 
                     /*
                     ScrollView {
@@ -45,6 +44,24 @@ struct NasaImageView: View {
                             .padding()
                     }
                      */
+                
+                    //adding favorite button
+            HStack {
+                Spacer()
+                Button(action: {
+                    //what does button does
+                    viewModel.addToFavorites()
+                }) {
+                    //what the button looks like
+                    Image(systemName: viewModel.isFavorite(apod) ? "heart.fill" : "heart")
+                        .foregroundColor(.red)
+                        .font(.title)
+                    
+                }
+            }
+                
+                Spacer()
+                //loading screen
                 } else {
                     ProgressView("Fetching NASA Image...")
                         .onAppear {

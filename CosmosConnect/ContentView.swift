@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = NasaImageViewModel()
+    
     var body: some View {
         VStack(spacing: 10) {
             Text("Cosmos Connect")

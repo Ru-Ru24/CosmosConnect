@@ -9,6 +9,8 @@ import Foundation
 
 class NasaImageViewModel: ObservableObject {
     @Published var apodImage: ApodImage?
+    @Published var favorites: [ApodImage] = []
+    
 
     func fetchImage() {
         let apiKey = "Nj7DNDewexIIfh0BAGMuC893RotU55vZQDHszdcC" // Replace this with your real key
@@ -47,5 +49,24 @@ class NasaImageViewModel: ObservableObject {
             }
         }.resume()
     }
+    
+    //start here
+    func addToFavorites() {
+        guard let current = apodImage else { return }
+        
+        if !favorites.contains(current) {
+            favorites.append(current)
+        }
+    }
+        
+        func isFavorite(_ image: ApodImage) -> Bool {
+                return favorites.contains(image)
+            }
+        
+        func removeFromFavorites(_ image: ApodImage) {
+                favorites.removeAll { $0 == image }
+            }
+    
+    
 }
 
