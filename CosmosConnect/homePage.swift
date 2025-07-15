@@ -60,7 +60,7 @@ struct homePage: View {
                 }
                 .padding()
             }
-            .ignoresSafeArea() // Ensures scroll content fills screen, including top
+            .ignoresSafeArea()
         }
     }
 
