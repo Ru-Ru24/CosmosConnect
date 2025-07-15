@@ -8,13 +8,24 @@
 import SwiftUI
 
 struct CityDiagram: View {
+    @State private var newZIndex: Int = 0
+    @State private var newVIndex: Int = 1
+    @State private var newTempIndex: Int = 0
     var body: some View {
-        ZStack {
-            RoundedRectangle(cornerRadius: 20).size(width: 350, height: 200, anchor: .top)
-            HStack {
-                RoundedRectangle(cornerRadius: 2).size(width: 30, height: 150, anchor: .topLeading).fill(.bloodred).padding([.top, .leading], 20.0)
+        VStack {
+            ZStack {
+                Image("postBlackout")
+                    .scaledToFit().zIndex(Double(newZIndex))
+                Image("preBlackout")                .scaledToFit().zIndex(Double(newVIndex))
+            }.padding()
+            Button("Flip the Lights") {
+                swap(&newZIndex, &newVIndex)
+                //newTempIndex = newZIndex
+                //newZIndex = newVIndex
+                //newVIndex = newTempIndex
             }
-        }.padding()
+        }
+
     }
 }
 
