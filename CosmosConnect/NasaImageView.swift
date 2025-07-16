@@ -5,6 +5,9 @@
 //  Created by Scholar on 7/14/25.
 //
 
+
+
+
 import SwiftUI
 
 struct NasaImageView: View {
@@ -12,6 +15,7 @@ struct NasaImageView: View {
 
     var body: some View {
         ZStack {
+            Color(.black).edgesIgnoringSafeArea(.all)
             VStack {
                 if let apod = viewModel.apodImage,
                    let imageURL = URL(string: apod.url) {
@@ -19,7 +23,9 @@ struct NasaImageView: View {
                     Text("NASA Astronomy Picture Of The Day")
                         .font(.title2)
                         .fontWeight(.bold)
+                        .foregroundColor(Color.white)
                         .multilineTextAlignment(.center)
+//<<<<<<< HEAD
                         .padding(.top)
 
                     Text(apod.title)
@@ -27,6 +33,16 @@ struct NasaImageView: View {
                         .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 5)
+//=======
+                    
+                    /*
+                    Text(apod.title)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.white)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                    */
 
                     AsyncImage(url: imageURL) { image in
                         image
@@ -41,6 +57,7 @@ struct NasaImageView: View {
 
                     ScrollView {
                         Text(apod.explanation)
+//<<<<<<< HEAD
                             .font(.body)
                             .padding()
                     }
@@ -56,7 +73,34 @@ struct NasaImageView: View {
                         }
                     }
                     .padding(.trailing)
-                } else {
+
+                            .foregroundColor(Color.white)
+                            .padding()
+                    }
+     //               */
+                    
+                
+                    //adding favorite button
+            
+            HStack {
+                Spacer()
+                Button(action: {
+                    //what does button does
+                    viewModel.addToFavorites()
+                }) {
+                    //what the button looks like
+                    Image(systemName: viewModel.isFavorite(apod) ? "heart.fill" : "heart")
+                        .foregroundColor(.red)
+                        .font(.title)
+                    
+                }
+            }
+             
+                
+                Spacer()
+                //loading screen
+                
+            } else {
                     ProgressView("Fetching NASA Image...")
                         .onAppear {
                             viewModel.fetchImage()
@@ -68,7 +112,8 @@ struct NasaImageView: View {
             .padding()
         }
     }
-}
+
+
 
 #Preview {
     NasaImageView()

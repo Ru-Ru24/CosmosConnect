@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+<<<<<<< HEAD:CosmosConnect/Assets.xcassets/fullImagePollution.imageset/Contents.json
+      "filename" : "fullImagePollution.jpg",
+=======
+      "filename" : "2025_07_15_0iy_Kleki.png",
+>>>>>>> main:CosmosConnect/Assets.xcassets/galaxy-star.imageset/Contents.json
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
