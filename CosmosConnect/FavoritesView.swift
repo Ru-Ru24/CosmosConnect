@@ -16,6 +16,13 @@ struct FavoritesView: View {
                 VStack(alignment: .leading) {
                     Text(image.title)
                         .font(.headline)
+                    Button(action: {
+                        viewModel.removeFromFavorites(image)
+                    }) {
+                        Image(systemName: "trash")
+                            .foregroundColor(.red)
+                    }
+
 
                     if let imageURL = URL(string: image.url) {
                         AsyncImage(url: imageURL) { image in

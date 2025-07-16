@@ -60,6 +60,12 @@ struct NasaImageView: View {
             HStack {
                 Spacer()
                 Button(action: {
+                    viewModel.toggleFavorite()
+                }) {
+                    Image(systemName: viewModel.isFavorite(apod) ? "heart.fill" : "heart")
+                        .foregroundColor(.red)
+                        .font(.title)
+
                     //what does button does
                     viewModel.addToFavorites()
                 }) {
