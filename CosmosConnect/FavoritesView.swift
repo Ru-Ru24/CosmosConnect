@@ -14,6 +14,11 @@ struct FavoritesView: View {
         NavigationView {
             List(viewModel.favorites) { image in
                 VStack(alignment: .leading) {
+                    //Group {
+                   // for pic in (_ image: ApodImage) {
+                      //      Image(favorites[pic])
+                     //   }
+                    //}
                     Text(image.title)
                         .font(.headline)
                     Button(action: {
