@@ -56,7 +56,7 @@ struct NasaImageView: View {
                     
                 
                     //adding favorite button
-            /*
+            
             HStack {
                 Spacer()
                 Button(action: {
@@ -70,7 +70,7 @@ struct NasaImageView: View {
                     
                 }
             }
-             */
+             
                 
                 Spacer()
                 //loading screen

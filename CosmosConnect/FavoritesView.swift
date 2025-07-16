@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FavoritesView: View {
     @ObservedObject var viewModel: NasaImageViewModel
+    
     var body: some View {
         NavigationView {
             List(viewModel.favorites) { image in

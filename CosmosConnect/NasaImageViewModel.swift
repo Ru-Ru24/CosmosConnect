@@ -51,6 +51,7 @@ class NasaImageViewModel: ObservableObject {
     }
     
     //start here
+    
     func addToFavorites() {
         guard let current = apodImage else { return }
         
@@ -66,6 +67,8 @@ class NasaImageViewModel: ObservableObject {
         func removeFromFavorites(_ image: ApodImage) {
                 favorites.removeAll { $0 == image }
             }
+     
+     
     
     
 }
