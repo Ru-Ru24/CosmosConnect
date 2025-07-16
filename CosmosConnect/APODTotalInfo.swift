@@ -99,7 +99,7 @@ struct APODTotalInfo: View {
         }
         .background(Color.black.edgesIgnoringSafeArea(.all))
     }
-}
+
 
 #Preview {
     APODTotalInfo()
