@@ -217,7 +217,7 @@ struct homePage: View {
                         .multilineTextAlignment(.leading)
                         .padding(.vertical)
 
-                    standardSectionView(title: "Section 1")
+                    standardSectionView(title: "About Us")
 
                     NavigationLink(destination: LightPollution()) {
                         Text("What is light pollution?")
@@ -228,12 +228,6 @@ struct homePage: View {
                     }
 
                     standardSectionView(title: "Section 3")
-
-                    Text("Welcome to Cosmo Connect (insert little desc)")
-                        .font(.caption)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.leading)
-                        .padding(.vertical)
 
                     nasaSectionView()
 
