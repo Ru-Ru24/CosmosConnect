@@ -92,7 +92,7 @@ struct LightPollution: View {
                     }
                 }
                 Spacer()
-                Text("Light pollution has multiple aspects:")
+                Text("Well,Light pollution has multiple aspects:")
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
                     .lineLimit(1)
