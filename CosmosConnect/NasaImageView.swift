@@ -65,6 +65,15 @@ struct NasaImageView: View {
                     Image(systemName: viewModel.isFavorite(apod) ? "heart.fill" : "heart")
                         .foregroundColor(.red)
                         .font(.title)
+
+                    //what does button does
+                    viewModel.addToFavorites()
+                }) {
+                    //what the button looks like
+                    Image(systemName: viewModel.isFavorite(apod) ? "heart.fill" : "heart")
+                        .foregroundColor(.red)
+                        .font(.title)
+                    
                 }
             }
              
