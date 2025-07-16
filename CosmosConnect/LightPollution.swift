@@ -92,15 +92,14 @@ struct LightPollution: View {
                     }
                 }
                 Spacer()
-                Text("Well,Light pollution has multiple aspects:")
+                Text("Light pollution has multiple aspects:")
                     .fontWeight(.heavy)
                     .multilineTextAlignment(.center)
                     .lineLimit(1)
                     .padding()
                 HStack {
                     VStack {
-                        Text("1. Light pollution is the glow over city skies")
-                        Text("2. Light pollution is the glow over city skies")
+                        Text("1. Light pollution is the glow over city skies\n2. Light pollution is light that goes beyond it's intended scope.\n   (e.g. a neighbors houselights also illuminate your driveway)")
                     }
                 }
                 
