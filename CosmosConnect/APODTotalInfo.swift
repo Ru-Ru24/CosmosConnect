@@ -38,7 +38,7 @@ struct APODTotalInfo: View {
                         } placeholder: {
                             ProgressView()
                         }
-
+                        
                         Text(apod.explanation)
                             .foregroundColor(.white)
                             .padding()
@@ -54,51 +54,8 @@ struct APODTotalInfo: View {
             .background(Color.black.edgesIgnoringSafeArea(.all))
         }
     }
-
-    }
-@StateObject private var viewModel = NasaImageViewModel()
-    var body: some View {
-        ScrollView {
-            VStack {
-                if let apod = viewModel.apodImage,
-                   let imageURL = URL(string: apod.url),
-                   apod.media_type == "image" {
-                    
-                    Text("NASA Astronomy Picture Of The Day")
-                        .font(.title2)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color.white)
-                        .multilineTextAlignment(.center)
-                    
-                    Text(apod.title)
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .multilineTextAlignment(.center)
-                        .padding()
-
-                    AsyncImage(url: imageURL) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .cornerRadius(12)
-                    } placeholder: {
-                        ProgressView()
-                    }
-
-                    Text(apod.explanation)
-                        .foregroundColor(.white)
-                        .padding()
-                } else {
-                    ProgressView("Loading full APOD...")
-                        .onAppear {
-                            viewModel.fetchImage()
-                        }
-                }
-            }
-            .padding()
-        }
-        .background(Color.black.edgesIgnoringSafeArea(.all))
-    }
+    
+}
 
 
 #Preview {
