@@ -20,20 +20,13 @@ struct NasaImageView: View {
                         .font(.title2)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
-                    
-<<<<<<< HEAD
-                    /*
-=======
->>>>>>> sruth-dev
+                        .padding(.top)
+
                     Text(apod.title)
-                        .font(.title2)
-                        .fontWeight(.bold)
+                        .font(.title3)
+                        .fontWeight(.semibold)
                         .multilineTextAlignment(.center)
-                        .padding()
-<<<<<<< HEAD
-                     */
-=======
->>>>>>> sruth-dev
+                        .padding(.bottom, 5)
 
                     AsyncImage(url: imageURL) { image in
                         image
@@ -44,50 +37,36 @@ struct NasaImageView: View {
                     } placeholder: {
                         ProgressView()
                     }
+                    .padding(.bottom)
 
-                    /*
                     ScrollView {
-                        //click here to view more
                         Text(apod.explanation)
+                            .font(.body)
                             .padding()
                     }
-                     */
-                
-                    //adding favorite button
-<<<<<<< HEAD
-            /*
-=======
->>>>>>> sruth-dev
-            HStack {
-                Spacer()
-                Button(action: {
-                    //what does button does
-                    viewModel.addToFavorites()
-                }) {
-                    //what the button looks like
-                    Image(systemName: viewModel.isFavorite(apod) ? "heart.fill" : "heart")
-                        .foregroundColor(.red)
-                        .font(.title)
-                    
-                }
-            }
-<<<<<<< HEAD
-             */
-=======
->>>>>>> sruth-dev
-                
-                Spacer()
-                //loading screen
+
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            viewModel.addToFavorites()
+                        }) {
+                            Image(systemName: viewModel.isFavorite(apod) ? "heart.fill" : "heart")
+                                .foregroundColor(.red)
+                                .font(.title)
+                        }
+                    }
+                    .padding(.trailing)
                 } else {
                     ProgressView("Fetching NASA Image...")
                         .onAppear {
                             viewModel.fetchImage()
                         }
                 }
+
+                Spacer()
             }
             .padding()
         }
-        
     }
 }
 
