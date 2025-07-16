@@ -55,13 +55,6 @@ struct homePage: View {
 
                         sectionView(title: "Section 3")
 
-                        Image("stars")
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(height: 150)
-                            .clipped()
-                            .padding()
-
                         Text("This is a placeholder")
                             .font(.caption)
                             .foregroundColor(.white)
