@@ -21,11 +21,13 @@ struct NasaImageView: View {
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                     
+                    /*
                     Text(apod.title)
                         .font(.title2)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .padding()
+                     */
 
                     AsyncImage(url: imageURL) { image in
                         image
@@ -46,6 +48,7 @@ struct NasaImageView: View {
                      */
                 
                     //adding favorite button
+            /*
             HStack {
                 Spacer()
                 Button(action: {
@@ -59,6 +62,7 @@ struct NasaImageView: View {
                     
                 }
             }
+             */
                 
                 Spacer()
                 //loading screen

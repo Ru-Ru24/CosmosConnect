@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+<<<<<<< HEAD
    uuid = "74582F45-24BD-439A-BC43-9C6BB5A0FCF3"
+=======
+   uuid = "D163DD47-B496-47FE-A06C-C88E5FD52827"
+>>>>>>> ohviya-dev
    type = "1"
    version = "2.0">
 </Bucket>
