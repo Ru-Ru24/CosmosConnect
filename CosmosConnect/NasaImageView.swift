@@ -21,13 +21,19 @@ struct NasaImageView: View {
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                     
+<<<<<<< HEAD
                     /*
+=======
+>>>>>>> sruth-dev
                     Text(apod.title)
                         .font(.title2)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .padding()
+<<<<<<< HEAD
                      */
+=======
+>>>>>>> sruth-dev
 
                     AsyncImage(url: imageURL) { image in
                         image
@@ -48,7 +54,10 @@ struct NasaImageView: View {
                      */
                 
                     //adding favorite button
+<<<<<<< HEAD
             /*
+=======
+>>>>>>> sruth-dev
             HStack {
                 Spacer()
                 Button(action: {
@@ -62,7 +71,10 @@ struct NasaImageView: View {
                     
                 }
             }
+<<<<<<< HEAD
              */
+=======
+>>>>>>> sruth-dev
                 
                 Spacer()
                 //loading screen

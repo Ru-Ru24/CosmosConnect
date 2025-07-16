@@ -1,7 +1,11 @@
 {
   "images" : [
     {
+<<<<<<< HEAD
       "filename" : "2025_07_15_0iy_Kleki.png",
+=======
+      "filename" : "galaxy-star.png",
+>>>>>>> sruth-dev
       "idiom" : "universal"
     },
     {
