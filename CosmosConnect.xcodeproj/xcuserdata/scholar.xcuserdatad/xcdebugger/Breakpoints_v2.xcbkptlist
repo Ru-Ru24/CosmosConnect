@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-<<<<<<< HEAD
-   uuid = "74582F45-24BD-439A-BC43-9C6BB5A0FCF3"
-=======
-   uuid = "D163DD47-B496-47FE-A06C-C88E5FD52827"
->>>>>>> ohviya-dev
+   uuid = "D7B248BE-807E-4102-B687-17A685669DFE"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7ECC21AE-B332-4531-898B-A761D9EA1A3F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CosmosConnect/ApodImage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
